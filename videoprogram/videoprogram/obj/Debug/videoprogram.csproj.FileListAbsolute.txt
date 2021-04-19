@@ -1,0 +1,10 @@
+C:\Users\NANI\source\repos\videoprogram\videoprogram\bin\Debug\videoprogram.exe.config
+C:\Users\NANI\source\repos\videoprogram\videoprogram\bin\Debug\videoprogram.exe
+C:\Users\NANI\source\repos\videoprogram\videoprogram\bin\Debug\videoprogram.pdb
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.csprojAssemblyReference.cache
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.Form1.resources
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.Properties.Resources.resources
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.csproj.GenerateResource.cache
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.csproj.CoreCompileInputs.cache
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.exe
+C:\Users\NANI\source\repos\videoprogram\videoprogram\obj\Debug\videoprogram.pdb
