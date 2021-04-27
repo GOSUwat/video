@@ -35,12 +35,17 @@ namespace videoprogram
             this.tick2 = new System.Windows.Forms.Label();
             this.tick3 = new System.Windows.Forms.Label();
             this.tick4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.reset = new System.Windows.Forms.Label();
+            this.set = new System.Windows.Forms.Label();
+            this.or1 = new System.Windows.Forms.Label();
+            this.or2 = new System.Windows.Forms.Label();
+            this.q1 = new System.Windows.Forms.Label();
+            this.q2 = new System.Windows.Forms.Label();
+            this.resetb = new System.Windows.Forms.TextBox();
+            this.setb = new System.Windows.Forms.TextBox();
+            this.Qb1 = new System.Windows.Forms.TextBox();
+            this.Qb2 = new System.Windows.Forms.TextBox();
+            this.forma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +62,7 @@ namespace videoprogram
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(171, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(171, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(586, 210);
             this.pictureBox1.TabIndex = 1;
@@ -96,77 +101,123 @@ namespace videoprogram
             this.tick4.Size = new System.Drawing.Size(0, 13);
             this.tick4.TabIndex = 5;
             // 
-            // label2
+            // reset
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label2.Location = new System.Drawing.Point(422, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 31);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "R";
+            this.reset.AutoSize = true;
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.reset.Location = new System.Drawing.Point(422, 66);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(34, 31);
+            this.reset.TabIndex = 6;
+            this.reset.Text = "R";
             // 
-            // label3
+            // set
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label3.Location = new System.Drawing.Point(422, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 31);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "S";
+            this.set.AutoSize = true;
+            this.set.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.set.Location = new System.Drawing.Point(422, 228);
+            this.set.Name = "set";
+            this.set.Size = new System.Drawing.Size(32, 31);
+            this.set.TabIndex = 7;
+            this.set.Text = "S";
             // 
-            // label4
+            // or1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label4.Location = new System.Drawing.Point(483, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 31);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "1";
+            this.or1.AutoSize = true;
+            this.or1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.or1.Location = new System.Drawing.Point(483, 100);
+            this.or1.Name = "or1";
+            this.or1.Size = new System.Drawing.Size(29, 31);
+            this.or1.TabIndex = 8;
+            this.or1.Text = "1";
             // 
-            // label5
+            // or2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label5.Location = new System.Drawing.Point(483, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 31);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "1";
+            this.or2.AutoSize = true;
+            this.or2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.or2.Location = new System.Drawing.Point(483, 210);
+            this.or2.Name = "or2";
+            this.or2.Size = new System.Drawing.Size(29, 31);
+            this.or2.TabIndex = 9;
+            this.or2.Text = "1";
             // 
-            // label6
+            // q1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label6.Location = new System.Drawing.Point(593, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 31);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Q";
+            this.q1.AutoSize = true;
+            this.q1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.q1.Location = new System.Drawing.Point(593, 66);
+            this.q1.Name = "q1";
+            this.q1.Size = new System.Drawing.Size(35, 31);
+            this.q1.TabIndex = 10;
+            this.q1.Text = "Q";
             // 
-            // label7
+            // q2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label7.Location = new System.Drawing.Point(593, 175);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 31);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "!Q";
+            this.q2.AutoSize = true;
+            this.q2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.q2.Location = new System.Drawing.Point(593, 175);
+            this.q2.Name = "q2";
+            this.q2.Size = new System.Drawing.Size(43, 31);
+            this.q2.TabIndex = 11;
+            this.q2.Text = "!Q";
+            // 
+            // resetb
+            // 
+            this.resetb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.resetb.Location = new System.Drawing.Point(356, 80);
+            this.resetb.Name = "resetb";
+            this.resetb.Size = new System.Drawing.Size(53, 29);
+            this.resetb.TabIndex = 12;
+            // 
+            // setb
+            // 
+            this.setb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.setb.Location = new System.Drawing.Point(356, 210);
+            this.setb.Name = "setb";
+            this.setb.Size = new System.Drawing.Size(53, 29);
+            this.setb.TabIndex = 13;
+            // 
+            // Qb1
+            // 
+            this.Qb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Qb1.Location = new System.Drawing.Point(631, 81);
+            this.Qb1.Name = "Qb1";
+            this.Qb1.Size = new System.Drawing.Size(53, 29);
+            this.Qb1.TabIndex = 14;
+            // 
+            // Qb2
+            // 
+            this.Qb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.Qb2.Location = new System.Drawing.Point(631, 210);
+            this.Qb2.Name = "Qb2";
+            this.Qb2.Size = new System.Drawing.Size(53, 29);
+            this.Qb2.TabIndex = 15;
+            // 
+            // forma
+            // 
+            this.forma.AutoSize = true;
+            this.forma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.forma.Location = new System.Drawing.Point(63, 140);
+            this.forma.Name = "forma";
+            this.forma.Size = new System.Drawing.Size(0, 25);
+            this.forma.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 281);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.forma);
+            this.Controls.Add(this.Qb2);
+            this.Controls.Add(this.Qb1);
+            this.Controls.Add(this.setb);
+            this.Controls.Add(this.resetb);
+            this.Controls.Add(this.q2);
+            this.Controls.Add(this.q1);
+            this.Controls.Add(this.or2);
+            this.Controls.Add(this.or1);
+            this.Controls.Add(this.set);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.tick4);
             this.Controls.Add(this.tick3);
             this.Controls.Add(this.tick2);
@@ -190,12 +241,17 @@ namespace videoprogram
         private System.Windows.Forms.Label tick2;
         private System.Windows.Forms.Label tick3;
         private System.Windows.Forms.Label tick4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label reset;
+        private System.Windows.Forms.Label set;
+        private System.Windows.Forms.Label or1;
+        private System.Windows.Forms.Label or2;
+        private System.Windows.Forms.Label q1;
+        private System.Windows.Forms.Label q2;
+        private System.Windows.Forms.TextBox resetb;
+        private System.Windows.Forms.TextBox setb;
+        private System.Windows.Forms.TextBox Qb1;
+        private System.Windows.Forms.TextBox Qb2;
+        private System.Windows.Forms.Label forma;
     }
 }
 

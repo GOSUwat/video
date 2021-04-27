@@ -18,3 +18,13 @@ C:\Users\NANI\Desktop\videoprogram\video\videoprogram\videoprogram\obj\Debug\vid
 C:\Users\NANI\Desktop\videoprogram\video\videoprogram\videoprogram\obj\Debug\videoprogram.csproj.CoreCompileInputs.cache
 C:\Users\NANI\Desktop\videoprogram\video\videoprogram\videoprogram\obj\Debug\videoprogram.exe
 C:\Users\NANI\Desktop\videoprogram\video\videoprogram\videoprogram\obj\Debug\videoprogram.pdb
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\bin\Debug\videoprogram.exe.config
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\bin\Debug\videoprogram.exe
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\bin\Debug\videoprogram.pdb
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.csprojAssemblyReference.cache
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.Form1.resources
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.Properties.Resources.resources
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.csproj.GenerateResource.cache
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.csproj.CoreCompileInputs.cache
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.exe
+C:\Users\пк-17\Desktop\videoprogram\videoprogram\obj\Debug\videoprogram.pdb
