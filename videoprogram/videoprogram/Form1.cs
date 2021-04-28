@@ -17,18 +17,37 @@ namespace videoprogram
         {
             InitializeComponent();
             pictureBox1.Hide();
+            label1.Text = "Click to Start";
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            for (int font = 60; font >= 25; font--)
+            int count = 0;
+            int font;
+            if (count == 0)
             {
-                label1.Font = new Font("Microsoft Himalaya", font);
-                Thread.Sleep(10);
+                for (font = 60; font >= 25; font--)
+                {
+                    label1.Font = new Font("Microsoft Himalaya", font);
+                    Thread.Sleep(10);
+                }
+                label1.Location = new Point(10, 30);
+                Thread.Sleep(500);
+                //pictureBox1.Show();
+                count++;
             }
-            label1.Location = new Point(10, 10);
-            Thread.Sleep(500);
-            pictureBox1.Show();
+            else
+            {
+                for (font = 60; font >= 25; font--)
+                {
+                    label1.Font = new Font("Microsoft Himalaya", font);
+                    Thread.Sleep(10);
+                }
+                label1.Location = new Point(10, 30);
+                Thread.Sleep(500);
+                count++;
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,6 +65,12 @@ namespace videoprogram
             setb.Hide();
 
         }
+        private int x(int xx)
+        {
+            int save;
+            save = xx;
+            return xx;
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -53,14 +78,28 @@ namespace videoprogram
             Qb2.Show();
             resetb.Show();
             setb.Show();
-            draw();
-
-
-
 
         }
-        private void draw()
+
+
+        private void триггерИToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PictureBox and = new PictureBox();
+            and.Location = pictureBox1.Location;
+            and.Size = pictureBox1.Size;
+            this.Controls.Add(and);
+            and.Show();
+            Graphics g;
+            Bitmap bitmap = new Bitmap(and.Width, and.Height);
+            g = Graphics.FromImage(bitmap);
+            g.Clear(Color.Black);
+        }
+
+        private void асинхронныйРСТриггерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Show();
+            label1.Text = "Async RS Trigger";
+            label1.Show();
             int x = 3;
             Graphics g;
             Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -78,7 +117,7 @@ namespace videoprogram
             g.DrawLine(penred, 300, 140, 250, 140);
             //Vihod R
             g.DrawLine(penred, 351, 30, 450, 30);
-            g.DrawArc(penblck,345,25,10,10,360,360);
+            g.DrawArc(penblck, 345, 25, 10, 10, 360, 360);
             //Vihod S
             g.DrawLine(penred, 351, 140, 450, 140);
             g.DrawArc(penblck, 345, 135, 10, 10, 360, 360);
@@ -105,7 +144,7 @@ namespace videoprogram
                 setb1 = Convert.ToInt32(setb.Text);
                 resetb1 = Convert.ToInt32(resetb.Text);
 
-                if (((setb1 == 1) & (resetb1 == 1))||(setb1+resetb1>2))
+                if (((setb1 == 1) & (resetb1 == 1)) || (setb1 + resetb1 > 2))
                 {
                     forma.Text = "Неверная Комбинация";
                 }
@@ -155,7 +194,8 @@ namespace videoprogram
                     Qb2.Text = ("0");
                     forma.Text = "Запись 0";
                 }
-                else {
+                else
+                {
                     forma.Text = "Хранение Информации";
                 }
 
@@ -165,18 +205,6 @@ namespace videoprogram
 
             }
             pictureBox1.Image = bitmap;
-        }
-
-
-
-
-        
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            draw();
-
         }
     }
 }

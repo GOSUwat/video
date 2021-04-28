@@ -46,7 +46,15 @@ namespace videoprogram
             this.Qb1 = new System.Windows.Forms.TextBox();
             this.Qb2 = new System.Windows.Forms.TextBox();
             this.forma = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.триггерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.триггерИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.триггерНЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.триггерИЛИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.асинхронныйРСТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -202,6 +210,60 @@ namespace videoprogram
             this.forma.Size = new System.Drawing.Size(0, 25);
             this.forma.TabIndex = 16;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.триггерыToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(769, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // триггерыToolStripMenuItem
+            // 
+            this.триггерыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.триггерИToolStripMenuItem,
+            this.триггерНЕToolStripMenuItem,
+            this.триггерИЛИToolStripMenuItem,
+            this.асинхронныйРСТриггерToolStripMenuItem,
+            this.дТриггерToolStripMenuItem});
+            this.триггерыToolStripMenuItem.Name = "триггерыToolStripMenuItem";
+            this.триггерыToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.триггерыToolStripMenuItem.Text = "Триггеры";
+            // 
+            // триггерИToolStripMenuItem
+            // 
+            this.триггерИToolStripMenuItem.Name = "триггерИToolStripMenuItem";
+            this.триггерИToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.триггерИToolStripMenuItem.Text = "Триггер И";
+            this.триггерИToolStripMenuItem.Click += new System.EventHandler(this.триггерИToolStripMenuItem_Click);
+            // 
+            // триггерНЕToolStripMenuItem
+            // 
+            this.триггерНЕToolStripMenuItem.Name = "триггерНЕToolStripMenuItem";
+            this.триггерНЕToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.триггерНЕToolStripMenuItem.Text = "Триггер НЕ";
+            // 
+            // триггерИЛИToolStripMenuItem
+            // 
+            this.триггерИЛИToolStripMenuItem.Name = "триггерИЛИToolStripMenuItem";
+            this.триггерИЛИToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.триггерИЛИToolStripMenuItem.Text = "Триггер ИЛИ";
+            // 
+            // асинхронныйРСТриггерToolStripMenuItem
+            // 
+            this.асинхронныйРСТриггерToolStripMenuItem.Name = "асинхронныйРСТриггерToolStripMenuItem";
+            this.асинхронныйРСТриггерToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.асинхронныйРСТриггерToolStripMenuItem.Text = "Асинхронный РС триггер";
+            this.асинхронныйРСТриггерToolStripMenuItem.Click += new System.EventHandler(this.асинхронныйРСТриггерToolStripMenuItem_Click);
+            // 
+            // дТриггерToolStripMenuItem
+            // 
+            this.дТриггерToolStripMenuItem.Name = "дТриггерToolStripMenuItem";
+            this.дТриггерToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.дТриггерToolStripMenuItem.Text = "Д триггер";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,10 +286,14 @@ namespace videoprogram
             this.Controls.Add(this.tick1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "-_-";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,6 +318,13 @@ namespace videoprogram
         private System.Windows.Forms.TextBox Qb1;
         private System.Windows.Forms.TextBox Qb2;
         private System.Windows.Forms.Label forma;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem триггерыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem триггерИToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem триггерНЕToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem триггерИЛИToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem асинхронныйРСТриггерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дТриггерToolStripMenuItem;
     }
 }
 
