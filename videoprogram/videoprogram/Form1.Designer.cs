@@ -53,6 +53,7 @@ namespace videoprogram
             this.триггерИЛИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.асинхронныйРСТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,9 +71,9 @@ namespace videoprogram
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(171, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(170, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(586, 210);
+            this.pictureBox1.Size = new System.Drawing.Size(587, 210);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -264,11 +265,22 @@ namespace videoprogram
             this.дТриггерToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.дТриггерToolStripMenuItem.Text = "Д триггер";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Solve";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 281);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.forma);
             this.Controls.Add(this.Qb2);
             this.Controls.Add(this.Qb1);
@@ -325,6 +337,7 @@ namespace videoprogram
         private System.Windows.Forms.ToolStripMenuItem триггерИЛИToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem асинхронныйРСТриггерToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дТриггерToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

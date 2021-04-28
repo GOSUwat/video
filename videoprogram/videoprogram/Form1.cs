@@ -13,11 +13,16 @@ namespace videoprogram
 {
     public partial class Form1 : Form
     {
+        Button and = new Button();
+        Button no = new Button();
+        Button or = new Button();
+        Button dtrigger = new Button();
+
         public Form1()
         {
             InitializeComponent();
             pictureBox1.Hide();
-            label1.Text = "Click to Start";
+            label1.Text = "Разбор работы Триггеров";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,40 +68,50 @@ namespace videoprogram
             Qb2.Hide();
             resetb.Hide();
             setb.Hide();
+            button1.Hide();
 
         }
-        private int x(int xx)
+        private void hides()
         {
-            int save;
-            save = xx;
-            return xx;
+            set.Hide();
+            reset.Hide();
+            or1.Hide();
+            or2.Hide();
+            q1.Hide();
+            q2.Hide();
+            Qb1.Hide();
+            Qb2.Hide();
+            resetb.Hide();
+            setb.Hide();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Qb1.Show();
-            Qb2.Show();
-            resetb.Show();
-            setb.Show();
-
+            
         }
 
 
         private void триггерИToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PictureBox and = new PictureBox();
-            and.Location = pictureBox1.Location;
-            and.Size = pictureBox1.Size;
+            label1.Text = "AND Trigger";
+            label1.BringToFront();
+            hides();
+            and.Location = button1.Location;
             this.Controls.Add(and);
-            and.Show();
             Graphics g;
-            Bitmap bitmap = new Bitmap(and.Width, and.Height);
+            Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(bitmap);
-            g.Clear(Color.Black);
+            pictureBox1.Image = bitmap;
         }
+
 
         private void асинхронныйРСТриггерToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            hides();
+            Qb1.Show();
+            Qb2.Show();
+            resetb.Show();
+            setb.Show();
+            button1.Show();
             pictureBox1.Show();
             label1.Text = "Async RS Trigger";
             label1.Show();
@@ -137,6 +152,23 @@ namespace videoprogram
             or2.Show();
             q1.Show();
             q2.Show();
+            pictureBox1.Image = bitmap;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Async RS Trigger";
+            label1.Show();
+            int x = 3;
+            Graphics g;
+            Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            g = Graphics.FromImage(bitmap);
+            Pen penblck = new Pen(Color.Black, x);
+            Pen penred = new Pen(Color.Red, x);
+            Pen penblue = new Pen(Color.Blue, x);
+
+            g.DrawRectangle(penblck, 300, 10, 50, 60); //Square R
+            g.DrawRectangle(penblck, 300, 120, 50, 60); //Square S
             try
             {
                 int setb1;
@@ -206,5 +238,6 @@ namespace videoprogram
             }
             pictureBox1.Image = bitmap;
         }
+        
     }
 }
