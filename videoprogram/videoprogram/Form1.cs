@@ -244,18 +244,7 @@ namespace videoprogram
             label1.BringToFront();
             hides();
             pictureBox1.Show();
-            int x = 3;
-            Graphics g;
-            Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            g = Graphics.FromImage(bitmap);
-            Pen penblck = new Pen(Color.Black, x);
-            Pen penred = new Pen(Color.Red, x);
-            Pen penblue = new Pen(Color.Blue, x);
 
-            g.DrawRectangle(penblck, 600, 10, 50, 60); //Square R
-            g.DrawRectangle(penblck, 600, 120, 50, 60); //Square S
-
-            pictureBox1.Image = bitmap;
 
 
 
