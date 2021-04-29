@@ -48,11 +48,9 @@ namespace videoprogram
             this.forma = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.триггерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.триггерИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.триггерНЕToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.триггерИЛИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.асинхронныйРСТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дТриггерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.асинхронныйРСТриггерToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -133,20 +131,20 @@ namespace videoprogram
             // or1
             // 
             this.or1.AutoSize = true;
-            this.or1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.or1.Location = new System.Drawing.Point(483, 100);
+            this.or1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F);
+            this.or1.Location = new System.Drawing.Point(472, 97);
             this.or1.Name = "or1";
-            this.or1.Size = new System.Drawing.Size(29, 31);
+            this.or1.Size = new System.Drawing.Size(20, 22);
             this.or1.TabIndex = 8;
             this.or1.Text = "1";
             // 
             // or2
             // 
             this.or2.AutoSize = true;
-            this.or2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.or2.Location = new System.Drawing.Point(483, 210);
+            this.or2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F);
+            this.or2.Location = new System.Drawing.Point(472, 210);
             this.or2.Name = "or2";
-            this.or2.Size = new System.Drawing.Size(29, 31);
+            this.or2.Size = new System.Drawing.Size(20, 22);
             this.or2.TabIndex = 9;
             this.or2.Text = "1";
             // 
@@ -224,46 +222,33 @@ namespace videoprogram
             // триггерыToolStripMenuItem
             // 
             this.триггерыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.триггерИToolStripMenuItem,
-            this.триггерНЕToolStripMenuItem,
-            this.триггерИЛИToolStripMenuItem,
             this.асинхронныйРСТриггерToolStripMenuItem,
-            this.дТриггерToolStripMenuItem});
+            this.дТриггерToolStripMenuItem,
+            this.асинхронныйРСТриггерToolStripMenuItem1});
             this.триггерыToolStripMenuItem.Name = "триггерыToolStripMenuItem";
             this.триггерыToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.триггерыToolStripMenuItem.Text = "Триггеры";
             // 
-            // триггерИToolStripMenuItem
-            // 
-            this.триггерИToolStripMenuItem.Name = "триггерИToolStripMenuItem";
-            this.триггерИToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.триггерИToolStripMenuItem.Text = "Триггер И";
-            this.триггерИToolStripMenuItem.Click += new System.EventHandler(this.триггерИToolStripMenuItem_Click);
-            // 
-            // триггерНЕToolStripMenuItem
-            // 
-            this.триггерНЕToolStripMenuItem.Name = "триггерНЕToolStripMenuItem";
-            this.триггерНЕToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.триггерНЕToolStripMenuItem.Text = "Триггер НЕ";
-            // 
-            // триггерИЛИToolStripMenuItem
-            // 
-            this.триггерИЛИToolStripMenuItem.Name = "триггерИЛИToolStripMenuItem";
-            this.триггерИЛИToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.триггерИЛИToolStripMenuItem.Text = "Триггер ИЛИ";
-            // 
             // асинхронныйРСТриггерToolStripMenuItem
             // 
             this.асинхронныйРСТриггерToolStripMenuItem.Name = "асинхронныйРСТриггерToolStripMenuItem";
-            this.асинхронныйРСТриггерToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.асинхронныйРСТриггерToolStripMenuItem.Text = "Асинхронный РС триггер";
+            this.асинхронныйРСТриггерToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.асинхронныйРСТриггерToolStripMenuItem.Text = "OR Асинхронный РС триггер";
             this.асинхронныйРСТриггерToolStripMenuItem.Click += new System.EventHandler(this.асинхронныйРСТриггерToolStripMenuItem_Click);
             // 
             // дТриггерToolStripMenuItem
             // 
             this.дТриггерToolStripMenuItem.Name = "дТриггерToolStripMenuItem";
-            this.дТриггерToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.дТриггерToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.дТриггерToolStripMenuItem.Text = "Д триггер";
+            this.дТриггерToolStripMenuItem.Click += new System.EventHandler(this.дТриггерToolStripMenuItem_Click);
+            // 
+            // асинхронныйРСТриггерToolStripMenuItem1
+            // 
+            this.асинхронныйРСТриггерToolStripMenuItem1.Name = "асинхронныйРСТриггерToolStripMenuItem1";
+            this.асинхронныйРСТриггерToolStripMenuItem1.Size = new System.Drawing.Size(243, 22);
+            this.асинхронныйРСТриггерToolStripMenuItem1.Text = "AND Асинхронный РС триггер";
+            this.асинхронныйРСТриггерToolStripMenuItem1.Click += new System.EventHandler(this.асинхронныйРСТриггерToolStripMenuItem1_Click);
             // 
             // button1
             // 
@@ -332,12 +317,10 @@ namespace videoprogram
         private System.Windows.Forms.Label forma;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem триггерыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem триггерИToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem триггерНЕToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem триггерИЛИToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem асинхронныйРСТриггерToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дТриггерToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem асинхронныйРСТриггерToolStripMenuItem1;
     }
 }
 
