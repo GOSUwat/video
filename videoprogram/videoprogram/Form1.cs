@@ -15,6 +15,10 @@ namespace videoprogram
     {
         Button and = new Button();
         Button dtrigger = new Button();
+        public Point reb = new Point();
+        public Point seb = new Point();
+        public Point qb1 = new Point();
+        public Point qb2 = new Point();
 
         public Form1()
         {
@@ -76,6 +80,10 @@ namespace videoprogram
             and.Text = "Solve";
             and.Click += new EventHandler(and_Click);
             and.Hide();
+            reb = resetb.Location;
+            seb = setb.Location;
+            qb1 = Qb1.Location;
+            qb2 = Qb2.Location;
         }
 
         private void hides()
@@ -99,7 +107,18 @@ namespace videoprogram
 
         private void асинхронныйРСТриггерToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Qb1.Text = null;
+            Qb2.Text = null;
+            resetb.Text = null;
+            setb.Text = null;
+            forma.Text = null;
+
+            resetb.Location = reb;
+            setb.Location = seb;
+            Qb1.Location = qb1;
+            Qb2.Location = qb2;
             dtrigger.Hide();
+            and.Hide();
             reset.Text = "R";
             set.Text = "S";
             or1.Text = "1";
@@ -240,10 +259,28 @@ namespace videoprogram
 
         private void дТриггерToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            forma.Text = null;
+            Qb1.Text = null;
+            Qb2.Text = null;
+            resetb.Text = null;
+            setb.Text = null;
+            and.Hide();
+            button1.Hide();
+            dtrigger.Show();
             label1.Text = "D Trigger";
             label1.BringToFront();
             hides();
             pictureBox1.Show();
+            resetb.Location = new Point(110,75);
+            Qb1.Location = new Point(550, 100);
+            setb.Location = new Point(110, 165);
+            Qb2.Location = new Point(550, 210);
+            Qb1.Show();
+            Qb2.Show();
+            setb.Show();
+            resetb.Show();
+
+            pictureBox1.Image = Image.FromFile(@"videostuff\0.png");
 
 
 
@@ -252,10 +289,20 @@ namespace videoprogram
 
         private void асинхронныйРСТриггерToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            forma.Text = null;
+            Qb1.Text = null;
+            Qb2.Text = null;
+            resetb.Text = null;
+            setb.Text = null;
+            resetb.Location = reb;
+            setb.Location = seb;
+            Qb1.Location = qb1;
+            Qb2.Location = qb2;
             reset.Text = "S";
             set.Text = "R";
             or1.Text = "and";
             or2.Text = "and";
+            dtrigger.Hide();
             button1.Hide();
             hides();
             Qb1.Show();
@@ -308,12 +355,6 @@ namespace videoprogram
 
         private void and_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
             label1.Text = "AND Async RS Trigger";
             label1.Show();
             int x = 3;
@@ -338,30 +379,7 @@ namespace videoprogram
                 {
                     forma.Text = "Неверная Комбинация";
                 }
-                else if ((setb1 == 0) & (resetb1 == 1)) //SET = 0 RESET = 1
-                {
-                    g.DrawLine(penblue, 300, 140, 250, 140);
-                    g.DrawLine(penred, 351, 140, 450, 140);
-
-                    g.DrawLine(penred, 380, 80, 380, 140);
-                    g.DrawLine(penred, 382, 80, 270, 80);
-                    g.DrawLine(penred, 270, 40, 270, 82);
-                    g.DrawLine(penred, 270, 40, 300, 40);
-
-                    g.DrawLine(penblue, 351, 30, 450, 30);
-
-                    g.DrawLine(penblue, 400, 30, 400, 90);
-                    g.DrawLine(penblue, 402, 90, 270, 90);
-                    g.DrawLine(penblue, 270, 90, 270, 130);
-                    g.DrawLine(penblue, 269, 130, 300, 130);
-
-                    g.DrawLine(penred, 300, 30, 250, 30);
-                    Qb1.Text = ("1");
-                    Qb2.Text = ("0");
-                    forma.Text = "Запись 1";
-                }
-
-                else if ((setb1 == 1) & (resetb1 == 0)) //SET = 1 RESET = 0
+                else if ((setb1 == 1) & (resetb1 == 0)) //SET = 0 RESET = 1
                 {
                     g.DrawLine(penred, 300, 140, 250, 140);
                     g.DrawLine(penblue, 351, 140, 450, 140);
@@ -379,6 +397,29 @@ namespace videoprogram
                     g.DrawLine(penred, 269, 130, 300, 130);
 
                     g.DrawLine(penblue, 300, 30, 250, 30);
+                    Qb1.Text = ("1");
+                    Qb2.Text = ("0");
+                    forma.Text = "Запись 1";
+                }
+
+                else if ((setb1 == 0) & (resetb1 == 1)) //SET = 1 RESET = 0
+                {
+                    g.DrawLine(penblue, 300, 140, 250, 140);
+                    g.DrawLine(penred, 351, 140, 450, 140);
+
+                    g.DrawLine(penred, 380, 80, 380, 140);
+                    g.DrawLine(penred, 382, 80, 270, 80);
+                    g.DrawLine(penred, 270, 40, 270, 82);
+                    g.DrawLine(penred, 270, 40, 300, 40);
+
+                    g.DrawLine(penblue, 351, 30, 450, 30);
+
+                    g.DrawLine(penblue, 400, 30, 400, 90);
+                    g.DrawLine(penblue, 402, 90, 270, 90);
+                    g.DrawLine(penblue, 270, 90, 270, 130);
+                    g.DrawLine(penblue, 269, 130, 300, 130);
+
+                    g.DrawLine(penred, 300, 30, 250, 30);
 
                     Qb1.Text = ("0");
                     Qb2.Text = ("1");
@@ -399,6 +440,55 @@ namespace videoprogram
 
         private void dtrigger_Click(object sender, EventArgs e)
         {
+            int setb1;
+            int resetb1;
+            try
+            {
+                setb1 = Convert.ToInt32(setb.Text);
+                resetb1 = Convert.ToInt32(resetb.Text);
+                if ((resetb1 == 1) & (setb1 == 1))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\0.png");
+                    Qb1.Text = ("1");
+                    Qb2.Text = ("0");
+                }
+                else if ((resetb1 == 0) & (setb1 == 1))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\1.png");
+                    Qb1.Text = ("0");
+                    Qb2.Text = ("1");
+                }
+                else if ((resetb1 == 1) & (setb1 == 0))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\2.png");
+                    Qb1.Text = ("0");
+                    Qb2.Text = ("1");
+                }
+                else if ((resetb1 == 1) & (setb1 == 1))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\3.png");
+                    Qb1.Text = ("1");
+                    Qb2.Text = ("0");
+                }
+                else if ((resetb1 == 1) & (setb1 == 0))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\4.png");
+                    Qb1.Text = ("1");
+                    Qb2.Text = ("0");
+                }
+                else if ((resetb1 == 0) & (setb1 == 0))
+                {
+                    pictureBox1.Image = Image.FromFile(@"videostuff\5.png");
+                    Qb1.Text = ("1");
+                    Qb2.Text = ("0");
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            
+
 
         }
     }
